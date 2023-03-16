@@ -74,6 +74,6 @@ RUN pip install numpy \
         
 ENV PATH="/home/node/.poetry/bin:$PATH"
 
-ENTRYPOINT ["docker-entrypoint.sh"]
+COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 CMD ["yarn", "dev"]
